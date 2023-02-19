@@ -1,37 +1,45 @@
+import React, { useEffect } from "react";
+
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 export default function Home() {
+
+  useEffect(() =>
+  {        
+    document.documentElement.setAttribute("data-bs-theme", "dark");
+      document.body.classList.add("min-vh-100");
+  });
+  
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <Head>
         <title>De-mine UA</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main>
-        <Header title="Low-cost metal detection solution for UA's mined land" />
-        <p className="col description">
-          A metal detector but for a of the price.
-        </p>
-        <div class="col col-12 sketchfab-embed-wrapper">
-          <iframe title="Walkman WM-F35 SONY" frameborder="0" allowfullscreen mozallowfullscreen="true"
-            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-            style={{width:"calc(50vw)", height:"calc(50vh)" }}
-            xr-spatial-tracking execution-while-out-of-viewport
-            execution-while-not-rendered web-share src="https://sketchfab.com/models/5d8f30c391874f20a22f070720ef3c3c/embed"> </iframe>
-        
-        </div>
-        <div className="col">
-          <Header title="Why?"></Header>
-          <p className="col description">
-            A significant portion of the land in Ukraine is contaminated with landmines, which will require clearance.
-          </p>
-        </div>
-        <div className="col">
-          <img src="landmines_area.png" style={{ width: "calc(60vh)" }} />
-        </div>
+      <main className="row justify-content-center m-1">
+        <div className="col col-12 sketchfab-embed-wrapper row mb-5">
+          <div className="col">
+            <iframe src="https://gmail1120944.autodesk360.com/shares/public/SH35dfcQT936092f0e433ebaff7df10d3a04?mode=embed" width="800" height="700" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+          </div>
+          <div className='col-3'>
+            <Header title="We are liberating Ukraine from LANDMINES!" />
+            <p>Our pulse induction metal detector saves lives by assisting in the demining operations</p>
+            <p className="col description">
+              <ul>
+                <li>Lightweight, foldable design</li>
+                <li>Acceptable performance in most scenarios</li>
+                <li>Innovative printed circuit search head</li>
+                <li>Easy to scale and produce</li>
+                <li>Current BoM cost 23€/pc @ QTY 500</li>
+                <li>Experienced team – knows how to ship</li>
+              </ul>
+            </p>
+          </div>
+        </div>  
       </main>
     </div>
   )
