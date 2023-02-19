@@ -20,12 +20,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="row justify-content-center m-1">
+      <main className="row justify-content-center m-3">
         <div className="col col-12 sketchfab-embed-wrapper row mb-5">
           <div className="col">
             <iframe src="https://gmail1120944.autodesk360.com/shares/public/SH35dfcQT936092f0e433ebaff7df10d3a04?mode=embed" width="800" height="700" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
           </div>
-          <div className='col-3'>
+          <div className='col-5'>
             <Header title="We are liberating Ukraine from LANDMINES!" />
             <p>Our pulse induction metal detector saves lives by assisting in the demining operations</p>
             <p className="col description">
